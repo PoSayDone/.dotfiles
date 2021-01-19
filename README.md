@@ -8,7 +8,7 @@ sudo pacman -S stow
 ```
 ### Installation command
 ```bash
-git clone https://github.com/PoSayDone/.dotfiles.git && cd .dotfiles && stow * --adopt  
+git clone https://github.com/PoSayDone/.dotfiles.git && cd .dotfiles && stow */ --adopt                                                                                                                                                               
 ```
 It will overwrite existing dotfiles, please backup them before using command
 ## Screenshots
