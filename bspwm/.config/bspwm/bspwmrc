@@ -10,10 +10,11 @@ bspc config window_gap          12
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
+bspc config focus_follows_pointer true
 
 bspc rule -a TelegramDesktop desktop='^3' follow=off focus=off
 bspc rule -a discord desktop='^3' follow=off focus=off
-bspc rule -a firefox desktop='^2' 
+bspc rule -a firefox desktop='^2'
 bspc rule -a Lutris desktop='^5' follow=off focus=off
 bspc rule -a mpv state=floating
 bspc rule -a origin.exe state=floating follow=off focus=off
