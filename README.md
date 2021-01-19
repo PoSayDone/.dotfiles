@@ -11,3 +11,10 @@ sudo pacman -S stow
 git clone https://github.com/PoSayDone/.dotfiles.git && cd .dotfiles && stow * --adopt  
 ```
 It will overwrite existing dotfiles, please backup them before using comand
+## Screenshots
+![alt text](https://i.imgur.com/JqzL16Y.png)
+![alt text](https://i.imgur.com/KOGGWxP.png)
+![alt text](https://i.imgur.com/YayPR1r.png)
+![alt text](https://i.imgur.com/dDVwm53.png)
+
+
