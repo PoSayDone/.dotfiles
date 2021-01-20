@@ -182,19 +182,19 @@ format-full-padding = 1
 format-full-background = ${{colors.active}}
 
 ramp-capacity-0 = 
-ramp-capacity-1 =  
-ramp-capacity-2 =  
+ramp-capacity-1 = 
+ramp-capacity-2 = 
 ramp-capacity-3 = 
-ramp-capacity-4 =  
+ramp-capacity-4 = 
 ramp-capacity-foreground = ${{colors.foreground}}
 
-animation-charging-foreground = ${{colors.foreground}}
+animation-charging-foreground = ${{colors.foreround}}
 animation-charging-framerate = 500
 animation-charging-0 = 
-animation-charging-1 =  
-animation-charging-2 =  
+animation-charging-1 = 
+animation-charging-2 = 
 animation-charging-3 = 
-animation-charging-4 =  
+animation-charging-4 = 
 format-charging-background = ${{colors.highlight}}
 format-discharging-background = ${{colors.active}}
 
@@ -206,3 +206,4 @@ margin-top = 5
 margin-bottom = 0
 
 ; vim:ft=dosini
+

@@ -1,11 +1,11 @@
 [urgency_low]
-    background = "#0A0F13"
-    foreground = "#3c78e2"
+    background = "#031C1D"
+    foreground = "#4592ca"
     timeout = 5
 
 [urgency_normal]
-    background = "#0A0F13"
-    foreground = "#3c78e2"
+    background = "#031C1D"
+    foreground = "#4592ca"
     timeout = 5
 
 [urgency_critical]
@@ -15,9 +15,7 @@
     timeout = 5
 
 [global]
-    ### Display ###
-
-    # Which monitor should the notifications be displayed on.
+    frame_color = "#4592ca"
     monitor = 0
     follow = mouse
     geometry = "0x0-30+20"
@@ -29,7 +27,6 @@
     padding = 8
     horizontal_padding = 8
     frame_width = 2
-    frame_color = "#3c78e2"
     separator_color = auto
     sort = yes
     idle_threshold = 120

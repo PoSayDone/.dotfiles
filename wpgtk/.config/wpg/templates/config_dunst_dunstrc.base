@@ -15,9 +15,7 @@
     timeout = 5
 
 [global]
-    ### Display ###
-
-    # Which monitor should the notifications be displayed on.
+    frame_color = "{color12}"
     monitor = 0
     follow = mouse
     geometry = "0x0-30+20"
@@ -29,7 +27,6 @@
     padding = 8
     horizontal_padding = 8
     frame_width = 2
-    frame_color = "#3c78e2"
     separator_color = auto
     sort = yes
     idle_threshold = 120
