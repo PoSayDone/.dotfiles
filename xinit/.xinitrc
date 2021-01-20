@@ -3,7 +3,6 @@
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap sysresources=/etc/X11/xinit/.Xresources
 sysmodmap=/etc/X11/xinit/.Xmodmap
-
 # merge in defaults and keymaps
 
 if [ -f $sysresources ]; then
@@ -52,5 +51,10 @@ exec sxhkd &
 exec xset r rate 300 50 &
 exec picom &
 setxkbmap -layout 'us,ru' -option 'grp:alt_shift_toggle,grp_led:scroll' &
-xinput --set-prop 20 'libinput Accel Speed' -0.9 &
-exec polybar wpgtk
+xinput --set-prop 13 'libinput Accel Speed' -0.9 &
+exec polybar wpgtk &
+exec discord &
+exec telegram-desktop &
+exec firefox &
+exec kitty &
+exec spotify
