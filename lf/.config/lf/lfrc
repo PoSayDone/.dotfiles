@@ -54,7 +54,7 @@ cmd fzf_jump ${{
   lf -remote "send $id $cmd \"$res\""
 }}
 
-cmd paste-override &{{
+cmd paste-overwrite &{{
 	set -f
 	load=$(lf -remote "load")
 	mode=$(echo "$load" | head -1)

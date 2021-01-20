@@ -8,6 +8,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 export PATH=/home/posaydone/.config/rofi/bin:$PATH
+export PATH=/home/posaydone/.local/bin:$PATH
 
 export EDITOR=nvim
 

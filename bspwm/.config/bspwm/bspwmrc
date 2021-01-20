@@ -24,3 +24,4 @@ bspc rule -a origin.exe state=floating follow=off focus=off
 killall picom; exec picom &
 bash /home/posaydone/.config/bspwm/bspwm_colors.sh &
 bash /home/posaydone/.config/wpg/wp_init.sh &
+bash /home/posaydone/.config/bspwm/bspwm_colors.sh &

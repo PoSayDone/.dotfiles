@@ -1,11 +1,11 @@
 [urgency_low]
-    background = "{color0}"
-    foreground = "{color12}"
+    background = "#0A0F13"
+    foreground = "#3c78e2"
     timeout = 5
 
 [urgency_normal]
-    background = "{color0}"
-    foreground = "{color12}"
+    background = "#0A0F13"
+    foreground = "#3c78e2"
     timeout = 5
 
 [urgency_critical]

@@ -55,6 +55,4 @@ xinput --set-prop 13 'libinput Accel Speed' -0.9 &
 exec polybar wpgtk &
 exec discord &
 exec telegram-desktop &
-exec firefox &
-exec kitty &
-exec spotify
+exec firefox
