@@ -19,6 +19,7 @@ bspc rule -a firefox desktop='^2' follow=off focus=off
 bspc rule -a Lutris desktop='^5' follow=off focus=off
 bspc rule -a spotify desktop='^6' follow=off focus=off
 bspc rule -a mpv state=floating
+bspc rule -a Wpg state=floating
 bspc rule -a origin.exe state=floating follow=off focus=off
 
 killall picom; exec picom &

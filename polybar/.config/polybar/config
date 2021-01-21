@@ -1,10 +1,10 @@
 [colors]
-background = #B3031C1D
-foreground = ${xrdb:color15:#ebf7ff}
-active = #3774a1
-inactive = #26506e
-highlight = ${xrdb:color2:#EEDB9B}
-error = ${xrdb:color9:#ffe4b2}
+background = #B30A0F13
+foreground = ${xrdb:color15:#d7f4ff}
+active = #3060b4
+inactive = #21427c
+highlight = ${xrdb:color2:#6687B5}
+error = ${xrdb:color9:#5c79e9}
 
 [bar/wpgtk]
 wm-restack = bspwm
