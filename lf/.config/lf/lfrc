@@ -205,18 +205,15 @@ map U unselect
 
 # Movement
 map gtr cd ~/.local/share/Trash/files
-map gus cd /run/media/brodie
+map gus cd /run/media/posaydone
 
-map gv cd ~/Видео
-
-map gp cd ~/Изображения
-
-map gd cd ~/Документы
-
-map gD cd ~/Загрузки
-map ge cd ~/desktop
-
-map gs cd ~/Скрипты
+map gb cd ~/Books
+map gv cd ~/Videos
+map gp cd ~/Pictures
+map gd cd ~/Documents
+map gD cd ~/Downloads
+map ge cd ~/Desktop
+map gs cd ~/Scripts
 
 map gc cd ~/.config
 map gC cd ~/.local/share/cell

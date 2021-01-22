@@ -10,6 +10,8 @@ fi
 export PATH=/home/posaydone/.config/rofi/bin:$PATH
 export PATH=/home/posaydone/.local/bin:$PATH
 
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
+
 export EDITOR=nvim
 
 # Path to your oh-my-zsh installation.

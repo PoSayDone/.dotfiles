@@ -110,7 +110,13 @@ if !exists('g:vscode')
 	" Git
   Plug 'airblade/vim-gitgutter'
 	Plug 'tpope/vim-fugitive'
+	" Java
+	Plug 'autozimu/LanguageClient-neovim'
+	Plug 'ncm2/ncm2'
+	Plug 'roxma/nvim-yarp'
+	Plug 'eclipse/eclipse.jdt.ls'
 	" Misc
+	Plug 'romgrk/barbar.nvim'
   Plug 'junegunn/fzf.vim'
   Plug 'junegunn/goyo.vim'
   Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
@@ -122,6 +128,7 @@ if !exists('g:vscode')
   Plug 'flrnd/candid.vim'
 	Plug 'joshdick/onedark.vim'
 	Plug 'ryanoasis/vim-devicons'
+	Plug 'kyazdani42/nvim-web-devicons'
 	Plug 'preservim/nerdtree'
 	call plug#end()
 
@@ -137,6 +144,34 @@ if !exists('g:vscode')
   colorscheme  onedark
 	au ColorScheme * hi Normal ctermbg=none guibg=none
 	au ColorScheme myspecialcolors hi Normal ctermbg=red guibg=red
+
+	"barbar
+	let bufferline = {}
+	let bufferline.icons = v:true
+
+	" Magic buffer-picking mode
+	nnoremap <silent> <C-s> :BufferPick<CR>
+	" Sort automatically by...
+	nnoremap <silent> <Space>bd :BufferOrderByDirectory<CR>
+	nnoremap <silent> <Space>bl :BufferOrderByLanguage<CR>
+	" Move to previous/next
+	nnoremap <silent>    <A-,> :BufferPrevious<CR>
+	nnoremap <silent>    <A-.> :BufferNext<CR>
+	" Re-order to previous/next
+	nnoremap <silent>    <A-<> :BufferMovePrevious<CR>
+	nnoremap <silent>    <A->> :BufferMoveNext<CR>
+	" Goto buffer in position...
+	nnoremap <silent>    <A-1> :BufferGoto 1<CR>
+	nnoremap <silent>    <A-2> :BufferGoto 2<CR>
+	nnoremap <silent>    <A-3> :BufferGoto 3<CR>
+	nnoremap <silent>    <A-4> :BufferGoto 4<CR>
+	nnoremap <silent>    <A-5> :BufferGoto 5<CR>
+	nnoremap <silent>    <A-6> :BufferGoto 6<CR>
+	nnoremap <silent>    <A-7> :BufferGoto 7<CR>
+	nnoremap <silent>    <A-8> :BufferGoto 8<CR>
+	nnoremap <silent>    <A-9> :BufferLast<CR>
+	" Close buffer
+	nnoremap <silent>    <A-c> :BufferClose<CR>
 
 	" NERDTree
 	nnoremap <leader>n :NERDTreeFocus<CR>
@@ -353,6 +388,25 @@ if !exists('g:vscode')
   set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 	au ColorScheme * hi Normal ctermbg=none guibg=none
 	au ColorScheme myspecialcolors hi Normal ctermbg=red guibg=red
+
+	set hidden
+
+	let g:LanguageClient_serverCommands = {
+		  \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
+			\ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
+			\ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
+	    \ 'python': ['/usr/local/bin/pyls'],
+	    \ 'ruby': ['~/.rbenv/shims/solargraph', 'stdio'],
+	    \ }
+
+	" note that if you are using Plug mapping you should not use `noremap` mappings.
+	nmap <F5> <Plug>(lcn-menu)
+	" Or map each action separately
+	nmap <silent>K <Plug>(lcn-hover)
+	nmap <silent> gd <Plug>(lcn-definition)
+	nmap <silent> <F2> <Plug>(lcn-rename)
+
+
 endif
 
 
