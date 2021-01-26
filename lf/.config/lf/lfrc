@@ -104,6 +104,7 @@ cmd unarchive ${{
       *.tar.gz) tar -xzvf "$f" ;;
       *.tar.bz2) tar -xjvf "$f" ;;
       *.tar) tar -xvf "$f" ;;
+      *.rar) unrar e "$f" ;;
       *) echo "Unsupported format" ;;
   esac
 }}
@@ -205,7 +206,7 @@ map U unselect
 
 # Movement
 map gtr cd ~/.local/share/Trash/files
-map gus cd /run/media/posaydone
+map gu cd /run/media/posaydone
 
 map gb cd ~/Books
 map gv cd ~/Videos
@@ -220,7 +221,7 @@ map gC cd ~/.local/share/cell
 map gl cd ~/.local
 map gE cd /etc
 map gU. cd /usr
-map gUs cd /usr/share
+map gU cd /usr/share
 
 map \;j cd ~
 

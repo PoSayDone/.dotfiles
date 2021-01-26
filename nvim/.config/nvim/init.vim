@@ -84,8 +84,6 @@ vnoremap <leader><Tab> <Esc>/<++><Enter>"_c4l
 " general insert commands
 inoremap ;g <++>
 
-autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE " transparent bg
-
 if !exists('g:vscode')
   call plug#begin('~/.config/nvim/autoload/plugged')
   " Themes
@@ -116,6 +114,7 @@ if !exists('g:vscode')
 	Plug 'roxma/nvim-yarp'
 	Plug 'eclipse/eclipse.jdt.ls'
 	" Misc
+	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 	Plug 'romgrk/barbar.nvim'
   Plug 'junegunn/fzf.vim'
   Plug 'junegunn/goyo.vim'
@@ -142,8 +141,8 @@ if !exists('g:vscode')
   set number relativenumber
   set termguicolors
   colorscheme  onedark
-	au ColorScheme * hi Normal ctermbg=none guibg=none
-	au ColorScheme myspecialcolors hi Normal ctermbg=red guibg=red
+	highlight Normal guibg=none
+	highlight NonText guibg=none
 
 	"barbar
 	let bufferline = {}
