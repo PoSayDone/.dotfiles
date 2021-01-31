@@ -10,7 +10,7 @@ rofi_command="rofi -theme $dir/three.rasi"
 
 # Error msg
 msg() {
-	rofi -theme "$dir/message.rasi" -e "Please install 'scrot' first."
+	rofi -theme "$dir/message.rasi" -e "Please install 'escrotum' first."
 }
 
 # Options
@@ -24,22 +24,22 @@ options="$screen\n$area\n$window"
 chosen="$(echo -e "$options" | $rofi_command -p '' -dmenu -selected-row 1)"
 case $chosen in
     $screen)
-		if [[ -f /usr/bin/scrot ]]; then
-			sleep 1; scrot 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Изображения/Скриншоты && mv $f ~/Изображения/Скриншоты && xclip -selection clipboard -t image/png -i ~/Изображения/Скриншоты/`ls -1 -t ~/Изображения/Скриншоты | head -1`' # All screens 
+		if [[ -f /usr/bin/escrotum ]]; then
+			escrotum 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Pictures/Screenshots && mv $f ~/Pictures/Screenshots && xclip -selection clipboard -t image/png -i ~/Pictures/Screenshots/`ls -1 -t ~/Pictures/Screenshots | head -1`' # All screens
 		else
 			msg
 		fi
         ;;
     $area)
-		if [[ -f /usr/bin/scrot ]]; then
-			scrot -s 'screenshot_%Y%m%d_%H%M%S.png' -e  'mkdir -p ~/Изображения/Скриншоты && mv $f ~/Изображения/Скриншоты && xclip -selection clipboard -t image/png -i ~/Изображения/Скриншоты/`ls -1 -t ~/Изображения/Скриншоты | head -1`'		
+		if [[ -f /usr/bin/escrotum ]]; then
+			escrotum -s 'screenshot_%Y%m%d_%H%M%S.png' -e  'mkdir -p ~/Pictures/Screenshots && mv $f ~/Pictures/Screenshots && xclip -selection clipboard -t image/png -i ~/Pictures/Screenshots/`ls -1 -t ~/Pictures/Screenshots | head -1`'
 		else
 			msg
 		fi
         ;;
     $window)
-		if [[ -f /usr/bin/scrot ]]; then
-			sleep 1; scrot -u 'screenshot_%Y%m%d_%H%M%S.png' -e  'mkdir -p ~/Изображения/Скриншоты && mv $f ~/Изображения/Скриншоты && xclip -selection clipboard -t image/png -i ~/Изображения/Скриншоты/`ls -1 -t ~/Изображения/Скриншоты | head -1`'		
+		if [[ -f /usr/bin/escrotum ]]; then
+			 escrotum -x 'screenshot_%Y%m%d_%H%M%S.png' -e  'mkdir -p ~/Pictures/Screenshots && mv $f ~/Pictures/Screenshots && xclip -selection clipboard -t image/png -i ~/Pictures/Screenshots/`ls -1 -t ~/Pictures/Screenshots | head -1`'
 		else
 			msg
 		fi

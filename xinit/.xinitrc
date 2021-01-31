@@ -35,7 +35,8 @@ exec gxkb &
 exec udiskie &
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 exec nm-applet &
+exec volumeicon &
 exec blueman-tray&
 exec bspwm &
-exec sxhkd 
+exec sxhkd
 

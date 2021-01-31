@@ -20,9 +20,9 @@ configuration {
 }
 
 * {
-    background:                     #0A0F13B3;
+    background:                     #131819B3;
     background-alt:                 #00000000;
-    background-bar:                 #3c78e215;
+    background-bar:                 #b3d9ec15;
     foreground:                     #f2f2f2EE;
     accent:			            	#3DAEE966;
 }
