@@ -1,11 +1,11 @@
 [urgency_low]
-    background = "#131819"
-    foreground = "#b3d9ec"
+    background = "#100d15"
+    foreground = "#ff87a0"
     timeout = 5
 
 [urgency_normal]
-    background = "#131819"
-    foreground = "#b3d9ec"
+    background = "#100d15"
+    foreground = "#ff87a0"
     timeout = 5
 
 [urgency_critical]
@@ -15,7 +15,7 @@
     timeout = 5
 
 [global]
-    frame_color = "#b3d9ec"
+    frame_color = "#ff87a0"
     monitor = 0
     follow = mouse
     geometry = "0x0-30+20"

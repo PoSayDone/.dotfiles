@@ -118,12 +118,10 @@ if !exists('g:vscode')
 	Plug 'romgrk/barbar.nvim'
   Plug 'junegunn/fzf.vim'
   Plug 'junegunn/goyo.vim'
-  Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 	Plug 'vimwiki/vimwiki'
 	Plug 'tpope/vim-repeat'
 	Plug 'dhruvasagar/vim-table-mode'
 	Plug 'relastle/bluewery.vim'
-	Plug 'arzg/vim-colors-xcode'
   Plug 'flrnd/candid.vim'
 	Plug 'joshdick/onedark.vim'
 	Plug 'ryanoasis/vim-devicons'
@@ -222,24 +220,6 @@ if !exists('g:vscode')
   let g:airline#extensions#wordcount#enabled = 1
   let g:airline#extensions#hunks#non_zero_only = 1
   let g:airline_theme='onedark'
-
-  " Vim Hexokinase
-  let g:Hexokinase_refreshEvents = ['InsertLeave']
-
-  let g:Hexokinase_optInPatterns = [
-  \     'full_hex',
-  \     'triple_hex',
-  \     'rgb',
-  \     'rgba',
-  \     'hsl',
-  \     'hsla',
-  \     'colour_names'
-  \ ]
-
-  let g:Hexokinase_highlighters = ['backgroundfull']
-
-  " Reenable hexokinase on enter
-  autocmd VimEnter * HexokinaseTurnOn
 
   " ------Vim Auto Closetag------
   " filenames like *.xml, *.html, *.xhtml, ...

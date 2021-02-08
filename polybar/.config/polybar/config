@@ -1,10 +1,10 @@
 [colors]
-background = #B3131819
-foreground = ${xrdb:color15:#eeffff}
-active = #338acb
-inactive = #235f8b
-highlight = ${xrdb:color2:#6C8FA6}
-error = ${xrdb:color9:#40adff}
+background = #B3100d15
+foreground = ${xrdb:color15:#fff7f7}
+active = #cb6c80
+inactive = #8c4a58
+highlight = ${xrdb:color2:#6C6087}
+error = ${xrdb:color9:#3479c3}
 
 [bar/wpgtk]
 enable-ipc = true
