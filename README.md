@@ -14,8 +14,9 @@ It will overwrite existing dotfiles, please backup them before using command
 ## Screenshots
 ![alt text](https://i.imgur.com/C5jqeLX.png)
 ![alt text](https://i.imgur.com/uXBB0vU.png)
+![alt text](https://i.imgur.com/QdkqC9f.png)
 ![alt text](https://i.imgur.com/LDkmRIp.png)
-![alt text](https://i.imgur.com/dDVwm53.png)
 ![alt text](https://i.imgur.com/6A2KXeX.png)
+
 
 
