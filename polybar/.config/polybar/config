@@ -1,28 +1,26 @@
 [colors]
-background = #B3100d15
-foreground = ${xrdb:color15:#fff7f7}
-active = #cb6c80
-inactive = #8c4a58
-highlight = ${xrdb:color2:#6C6087}
-error = ${xrdb:color9:#3479c3}
+background = #B31e1f2a
+foreground = ${xrdb:color15:#fdfdff}
+active = #cbcb97
+inactive = #8c8c68
+highlight = ${xrdb:color2:#A499A1}
+error = ${xrdb:color9:#83b3fb}
 
-[bar/wpgtk]
+[bar/base]
+border-size = 2
+border-color = #cbcb97
 enable-ipc = true
 wm-restack = bspwm
-width = 100%
-height = 30
-offset-y = 0%
 radius = 0.0
-fixed-center = true
+fixed-center = false
+bottom = false
+override-redirect = false
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
 line-size = 0
 label-line-color = #f00
-
-border-size = 0
-border-color = #00000000
 
 padding-left = 0
 padding-right = 0
@@ -33,9 +31,56 @@ module-margin-right = 0
 font-0 = FiraCodeNerdFont:style=Medium:size=10;2
 font-1 = FontAwesome:style=Regular:size=10;2
 
-modules-left = bspwm xwindow
-modules-center = spotify
-modules-right = system-usb-udev date volume wlan
+
+[bar/bspwm]
+inherit = bar/base
+
+width = 21%:+9
+height = 30
+offset-y = 12
+offset-x = 12
+
+modules-left = bspwm
+#modules-right = system-usb-udev date wlan
+
+[bar/time]
+inherit = bar/base
+
+width = 12%
+height = 30
+offset-y = 12
+offset-x = 44%:-4
+
+modules-center = date
+
+[bar/bottom]
+inherit = bar/base
+
+width = 14%:+5
+height = 30
+offset-y = 12
+offset-x = 12
+bottom = true
+
+font-0 = FiraCodeNerdFont:style=Medium:size=10;2
+font-1 = FontAwesome:style=Regular:size=10;2
+
+modules-left = spotify
+
+[bar/tray]
+inherit = bar/base
+
+background = none
+
+border-size = 0
+
+width = 1
+height = 34
+offset-y = 12
+offset-x = 100%:-12
+bottom = true
+
+modules-right = volume
 
 tray-position = right
 tray-padding = 2
