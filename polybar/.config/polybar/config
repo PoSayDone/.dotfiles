@@ -7,14 +7,14 @@ highlight = ${xrdb:color2:#A499A1}
 error = ${xrdb:color9:#83b3fb}
 
 [bar/base]
-border-size = 2
+border-size = 0
 border-color = #cbcb97
 enable-ipc = true
-wm-restack = bspwm
 radius = 0.0
 fixed-center = false
 bottom = false
 override-redirect = false
+wm-restack = bspwm
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -31,11 +31,13 @@ module-margin-right = 0
 font-0 = FiraCodeNerdFont:style=Medium:size=10;2
 font-1 = FontAwesome:style=Regular:size=10;2
 
+margin = 0
+padding = 0
 
 [bar/bspwm]
 inherit = bar/base
 
-width = 21%:+9
+width = 21%:+5
 height = 30
 offset-y = 12
 offset-x = 12
@@ -67,6 +69,8 @@ font-1 = FontAwesome:style=Regular:size=10;2
 
 modules-left = spotify
 
+padding = 0
+
 [bar/tray]
 inherit = bar/base
 
@@ -75,9 +79,9 @@ background = none
 border-size = 0
 
 width = 1
-height = 34
+height = 30
 offset-y = 12
-offset-x = 100%:-12
+offset-x = 100%:-13
 bottom = true
 
 modules-right = volume
@@ -86,6 +90,7 @@ tray-position = right
 tray-padding = 2
 tray-background = ${colors.inactive}
 
+padding = 0
 [module/system-usb-udev]
 type = custom/script
 exec = ~/.config/polybar/scripts/system-usb-udev.sh

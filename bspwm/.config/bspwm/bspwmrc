@@ -5,7 +5,9 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 bspc monitor -d 1 2 3 4 5 6 7 8 9 10
 
 bspc config border_width         2
-bspc config window_gap          12
+bspc config window_gap					 12
+
+bspc config window_gap					 12
 
 bspc config ignore_ewmh_focus true
 bspc config split_ratio          0.52
@@ -26,8 +28,8 @@ bspc rule -a origin.exe state=floating follow=off focus=off
 killall polybar; polybar wpgtk &
 killall picom; exec picom &
 
-bash /home/posaydone/.config/bspwm/bspwm_colors.sh &
-bash /home/posaydone/.config/wpg/wp_init.sh &
-bash /home/posaydone/.config/bspwm/bspwm_colors.sh &
+bash $HOME/.config/bspwm/bspwm_colors.sh &
+bash $HOME/.config/wpg/wp_init.sh &
+bash $HOME/.config/bspwm/bspwm_colors.sh &
 
-bash /home/posaydone/Scripts/autostart.sh &
+bash $HOME/Scripts/autostart.sh &
