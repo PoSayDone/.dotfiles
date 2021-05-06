@@ -90,9 +90,9 @@ cmd open_config  ${{
   $EDITOR $(bookmenu -b ~/.config/bookmenu/configs -f fzf -o)
 }}
 
-cmd dragon %dragon-drag-and-drop -a -x $f
-cmd dragon-stay %dragon-drag-and-drop -a $fx
-cmd dragon-individual %dragon-drag-and-drop $fx
+cmd dragon %dragon-drag-and-drop -a -x "$fx"
+cmd dragon-stay %dragon-drag-and-drop -a "$fx"
+cmd dragon-individual %dragon-drag-and-drop "$fx"
 cmd cpdragon %cpdragon
 cmd mvdragon %mvdragon
 cmd dlfile %dlfile
