@@ -3,7 +3,7 @@ let mapleader=" "
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
   silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  "autocmd VimEnter * PlugInstall
+  "autocmd VimEnter * PlugInstal
   "autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 
@@ -93,7 +93,9 @@ if !exists('g:vscode')
   " Code Completion
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   " Tags
-  Plug 'alvan/vim-closetag'
+	Plug 'gregsexton/MatchTag'
+	Plug 'alvan/vim-closetag'
+	Plug 'jiangmiao/auto-pairs'
   Plug 'tpope/vim-surround'
 	Plug 'mattn/emmet-vim'
   " Commenting
@@ -114,6 +116,7 @@ if !exists('g:vscode')
 	Plug 'roxma/nvim-yarp'
 	Plug 'eclipse/eclipse.jdt.ls'
 	" Misc
+	Plug 'lyokha/vim-xkbswitch'
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 	Plug 'romgrk/barbar.nvim'
   Plug 'junegunn/fzf.vim'
@@ -130,7 +133,6 @@ if !exists('g:vscode')
 	call plug#end()
 
   " Basic settings
-
   set mouse=a
   syntax on
   set ignorecase
@@ -141,6 +143,13 @@ if !exists('g:vscode')
   colorscheme  onedark
 	highlight Normal guibg=none
 	highlight NonText guibg=none
+	inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+	" XkbSwitch
+	let g:XkbSwitchEnabled = 1
+	let g:XkbSwitchLib = '/lib/libxkbswitch.so'
+	let g:XkbSwitchIMappings = ['ru']
+
 
 	"barbar
 	let bufferline = {}
@@ -168,7 +177,6 @@ if !exists('g:vscode')
 	nnoremap <silent>    <A-8> :BufferGoto 8<CR>
 	nnoremap <silent>    <A-9> :BufferLast<CR>
 	" Close buffer
-	nnoremap <silent>    <A-c> :BufferClose<CR>
 
 	" NERDTree
 	nnoremap <leader>n :NERDTreeFocus<CR>
@@ -196,9 +204,6 @@ if !exists('g:vscode')
 	map <leader><leader>j <Plug>(easymotion-overwin-line)
 	map <leader><leader>k <Plug>(easymotion-overwin-line)
 	map <leader><leader>w <Plug>(easymotion-overwin-w)
-
-	" Emmet
-	let g:user_emmet_leader_key='<A-c>'
 
 	" Table mode
 	let g:table_mode_delete_row_map = "<leader>tdr"

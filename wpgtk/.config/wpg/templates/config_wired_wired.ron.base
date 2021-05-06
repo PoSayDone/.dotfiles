@@ -1,0 +1,89 @@
+(
+    max_notifications: 6,
+    min_window_width: 1,
+    min_window_height: 5,
+
+    timeout: 10000,
+    poll_interval: 6,
+
+    debug: false,
+    debug_color: Color(r: 0.0, g: 1.0, b: 0.0, a: 1.0),
+    debug_color_alt: Color(r: 1.0, g: 0.0, b: 0.0, a: 1.0),
+
+    layout_blocks: [
+        (
+            name: "root",
+            parent: "",
+            hook: Hook(parent_anchor: TR, self_anchor: TR),
+            offset: Vec2(x: -12.0, y: 12.0),
+            params: NotificationBlock((
+                monitor: 0,
+                border_width: 0.0,
+                border_rounding: 3.0,
+                //background_color: Color(r: 0.15686, g: 0.15686, b: 0.15686, a: 1.0),
+                background_color: Color(hex: "#99{color0.strip}"),
+                border_color: Color(hex: "#ebdbb2"),
+                border_color_low: Color(hex: "#282828"),
+                border_color_critical: Color(hex: "#fb4934"),
+                border_color_paused: Color(hex: "#fabd2f"),
+
+                gap: Vec2(x: 0.0, y: 8.0),
+                notification_hook: Hook(parent_anchor: BR, self_anchor: TR),
+            )),
+        ),
+
+        (
+            name: "image",
+            parent: "root",
+            hook: Hook(parent_anchor: ML, self_anchor: TL),
+            offset: Vec2(x: 0.0, y: 0.0),
+            params: ImageBlock((
+                image_type: Hint,
+                // We actually want 4px padding, but the border is 3px.
+                padding: Padding(left: 7.0, right: 0.0, top: 7.0, bottom: 7.0),
+                rounding: 10.0,
+                scale_width: 70,
+                scale_height: 70,
+                min_width: 0,
+                min_height: 0,
+                filter_mode: Lanczos3,
+            )),
+        ),
+
+        (
+            name: "summary",
+            parent: "image",
+            hook: Hook(parent_anchor: MR, self_anchor: BL),
+            offset: Vec2(x: 0.0, y: 0.0),
+            params: TextBlock((
+                text: "%s",
+                font: "Iosevka Bold 11",
+                ellipsize: End,
+                color: Color(hex: "{color12}"),
+                padding: Padding(left: 7.0, right: 7.0, top: 7.0, bottom: 0.0),
+                dimensions: (width: (min: 50, max: 300), height: (min: 0, max: 0)),
+            )),
+        ),
+
+        (
+            name: "body",
+            parent: "summary",
+            hook: Hook(parent_anchor: BL, self_anchor: TL),
+            offset: Vec2(x: 0.0, y: -3.0),
+            params: TextBlock((
+                text: "%b",
+                font: "Iosevka 11",
+                color: Color(hex: "{color12}"),
+                padding: Padding(left: 7.0, right: 7.0, top: 3.0, bottom: 20.0),
+								dimensions: (width: (min: 50, max: 300), height: (min: 0, max: 60)),
+            )),
+        ),
+    ],
+
+    shortcuts: ShortcutsConfig (
+        notification_close: 1,
+        notification_closeall: 3,
+        notification_pause: 2,
+        notification_url: 8,
+    ),
+)

@@ -1,5 +1,5 @@
 [colors]
-background = #B3{color0.strip}
+background = #99{color0.strip}
 foreground = ${{xrdb:color15:{color15}}}
 active = {active}
 inactive = {inactive}

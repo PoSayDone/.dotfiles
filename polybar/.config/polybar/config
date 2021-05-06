@@ -1,14 +1,14 @@
 [colors]
-background = #B3100d15
-foreground = ${xrdb:color15:#fff7f7}
-active = #cb6c80
-inactive = #8c4a58
-highlight = ${xrdb:color2:#6C6087}
-error = ${xrdb:color9:#3479c3}
+background = #991e1f2a
+foreground = ${xrdb:color15:#fdfdff}
+active = #cbcb97
+inactive = #8c8c68
+highlight = ${xrdb:color2:#A499A1}
+error = ${xrdb:color9:#83b3fb}
 
 [bar/base]
 border-size = 0
-border-color = #cb6c80
+border-color = #cbcb97
 enable-ipc = true
 radius = 0.0
 fixed-center = false

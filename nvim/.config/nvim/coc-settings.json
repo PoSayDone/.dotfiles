@@ -1,5 +1,7 @@
 {
   "pairs.enableCharacters": ["(", "[", "{", "'", "\"", "`"],
+  "html.enable": true,
+  "html.autoClosingTags": true,
   "suggest.noselect": false,
   "coc.preferences.formatOnSaveFiletypes": [
     "javascript",

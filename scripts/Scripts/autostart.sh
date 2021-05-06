@@ -16,8 +16,7 @@ fi
 
 if ps ax | grep -v grep | grep polybar time> /dev/null
 then
-    echo "polybar service running, everything is fine"
-else
+    echo "polybar service running, everything is fine" else
    	exec polybar time &
 fi
 
@@ -36,11 +35,11 @@ else
     exec discord &
 fi
 
-if ps ax | grep -v grep | grep telegram-desktop > /dev/null
+if ps ax | grep -v grep | grep kotatogram-desktop > /dev/null
 then
     echo "telegram-desktop service running, everything is fine"
 else
-    exec telegram-desktop &
+    exec kotatogram-desktop &
 fi
 
 if ps ax | grep -v grep | grep firefox > /dev/null
@@ -71,4 +70,24 @@ else
     exec picom &
 fi
 
+if ps ax | grep -v grep | grep homepage > /dev/null
+then
+    echo "homepage service running, everything is fine"
+else
+    exec python /home/posaydone/Scripts/server.py &
+fi
+
+if ps ax | grep -v grep | grep wired > /dev/null
+then
+    echo "wired service running, everything is fine"
+else
+    exec wired &
+fi
+
+if ps ax | grep -v grep | grep Lf > /dev/null
+then
+    echo "lf running, everything is fine"
+else
+    exec kitty --class Lf -e zsh -c 'source ~/.zshrc; lf' &
+fi
 
